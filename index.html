@@ -2,153 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>kubica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kryštof Kubica | Personal Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="code.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">
-            <h1>Kryštof Kubica</h1>
+    <div class="vscode-container">
+        <!-- Title bar -->
+        <div class="titlebar">
+            <span>Visual Studio Code</span>
+            <div class="window-controls">
+                <div class="window-control window-minimize"></div>
+                <div class="window-control window-maximize"></div>
+                <div class="window-control window-close"></div>
+            </div>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+        
+        <!-- Activity bar -->
+        <div class="activitybar">
+            <div class="activity-icon active"><i class="fas fa-file-alt"></i></div>
+            <div class="activity-icon"><i class="fas fa-search"></i></div>
+            <div class="activity-icon"><i class="fas fa-code-branch"></i></div>
+            <div class="activity-icon"><i class="fas fa-bug"></i></div>
+            <div class="activity-icon"><i class="fas fa-puzzle-piece"></i></div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="sidebar-header">EXPLORER</div>
+            <ul class="explorer-files">
+                <li class="explorer-item" data-file="readme">
+                    <span class="file-icon markdown"><i class="fas fa-file-alt"></i>&nbsp;</span>
+                    README.MD
+                </li>
+                <li class="explorer-item" data-file="skills">
+                    <span class="file-icon html"><i class="fas fa-file-code"></i>&nbsp;</span>
+                    SKILLS.html
+                </li>
+                <li class="explorer-item" data-file="github">
+                    <span class="file-icon txt"><i class="fas fa-file"></i>&nbsp;</span>
+                    github.txt
+                </li>
+                <li class="explorer-item" data-file="contact">
+                    <span class="file-icon css"><i class="fas fa-file-code"></i>&nbsp;</span>
+                    contact.css
+                </li>
             </ul>
         </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <h1>Hello, I'm <span class="highlight">Kryštof Kubica</span></h1>
-            <p>Developer • Cat lover • Nature Explorer</p>
-            <div class="cta-buttons">
-                <a href="#blog" class="btn primary-btn">Read My Blog</a>
-                <a href="#about" class="btn secondary-btn">About Me</a>
+        
+        <div class="editor">
+            <div class="tabs">
+                <div class="tab active" data-file="readme"><span class="markdown"><i class="fas fa-file-alt"></i> README.MD</span></div>
+                <div class="tab" data-file="skills"><span class="html"><i class="fas fa-file-code"></i> SKILLS.html</span></div>
+                <div class="tab" data-file="github"><span class="txt"><i class="fas fa-file"></i> github.txt</span></div>
+                <div class="tab" data-file="contact"><span class="css"><i class="fas fa-file-code"></i> contact.css</span></div>
             </div>
-        </div>
-        <div class="hero-scroll">
-            <a href="#about">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user"></i>
+            <div class="content">
+                <div id="readme-content" class="tab-content active">
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
+                    </div>
+                    <div class="code-content">
+                        <h1># Welcome to My Portfolio</h1>
+                        <p>My name is Krystof Kubica, I am currently 15 years old and from the Czech Republic.</p>
+                        <p>i enjoy coding fun projects :)</p>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>Hello! I'm Kryštof, a passionate developer with a love for elegant code solutions and continuous learning. When I'm not in front of my computer, you can find me spending time with watching cat videos or exploring the beauty of nature.</p>
-                    
-                    <div class="interests">
-                        <div class="interest-item">
-                            <i class="fas fa-code"></i>
-                            <h3>Coding</h3>
-                            <p>Building solutions and learning new technologies (especially AI)</p>
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-cat"></i>
-                            <h3>Cats</h3>
-                            <p>Proud silly cat lover</p>
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-leaf"></i>
-                            <h3>Nature</h3>
-                            <p>Hiking, photography, and environmental preservation is important to me</p>
-                        </div>
+                
+                <div id="skills-content" class="tab-content">
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43
+                    </div>
+                    <div class="code-content">
+                        <p>&lt;!DOCTYPE html&gt;</p>
+                        <p>&lt;html&gt;</p>
+                        <p>&lt;head&gt;</p>
+                        <p>&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;</p>
+                        <p>&nbsp;&nbsp;&lt;title&gt;Skills&lt;/title&gt;</p>
+                        <p>&nbsp;&nbsp;&lt;style&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;body { font-family: sans-serif; }</p>
+                        <p>&nbsp;&nbsp;&lt;/style&gt;</p>
+                        <p>&lt;/head&gt;</p>
+                        <p>&lt;body&gt;</p>
+                        <p>&nbsp;&nbsp;&lt;h1&gt;My Skills&lt;/h1&gt;</p>
+                        <p>&nbsp;&nbsp;&lt;ul&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;CSS (Web Design)&lt;/li&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;JavaScript&lt;/li&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Python&lt;/li&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Machine learning&lt;/li&gt;</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;3D modeling with blender&lt;/li&gt;</p>
+                        <p>&nbsp;&nbsp;&lt;/ul&gt;</p>
+                        <p>&lt;/body&gt;</p>
+                        <p>&lt;/html&gt;</p>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="github-content" class="tab-content">
+                    <div class="line-numbers">
+                        1<br>2<br>3
+                    </div>
+                    <div class="code-content">
+                        <p>GitHub: https://github.com/krystofkubica</p>
+                    </div>
+                </div>
+                
+                <div id="contact-content" class="tab-content">
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49
+                    </div>
+                    <div class="code-content">
+                        <p>.contact-form {</p>
+                        <p>&nbsp;&nbsp;max-width: 300px;</p>
+                        <p>&nbsp;&nbsp;margin: 10px auto;</p>
+                        <p>&nbsp;&nbsp;padding: 10px;</p>
+                        <p>}</p>
+                        <p>.contact-form input,</p>
+                        <p>.contact-form textarea {</p>
+                        <p>&nbsp;&nbsp;padding: 5px;</p>
+                        <p>&nbsp;&nbsp;border: 1px solid #ccc;</p>
+                        <p>&nbsp;&nbsp;margin-bottom: 10px;</p>
+                        <p>}</p>
+                        <p>.contact-form button {</p>
+                        <p>&nbsp;&nbsp;padding: 5px;</p>
+                        <p>&nbsp;&nbsp;background: #007acc;</p>
+                        <p>&nbsp;&nbsp;color: #fff;</p>
+                        <p>&nbsp;&nbsp;border: none;</p>
+                        <p>}</p>
+                        <p>.contact-email::before {</p>
+                        <p>&nbsp;&nbsp;content: "kkubica912@gmail.com";</p>
+                        <p>&nbsp;&nbsp;display: block;</p>
+                        <p>&nbsp;&nbsp;text-align: center;</p>
+                        <p>&nbsp;&nbsp;color: #007acc;</p>
+                        <p>&nbsp;&nbsp;margin-bottom: 10px;</p>
+                        <p>}</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Blog Preview Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">Blog</h2>
-            <div class="blog-intro">
-                <p>Welcome to my thoughts and experiences. I write about Artificial intelligence here.</p>
-            </div>
-            <div class="blog-grid" id="blogPosts">
-                <!-- Blog posts will be loaded dynamically -->
-            </div>
-            <div class="blog-more">
-                <button id="loadMorePosts" class="btn primary-btn">Load More Posts</button>
+        
+        <!-- Status bar -->
+        <div class="statusbar">
+            <div class="status-item"><i class="fas fa-check-circle"></i> Ready</div>
+            <div class="status-item"><i class="fas fa-code-branch"></i> main</div>
+            <div class="status-right">
+                <div class="status-item">UTF-8</div>
+                <div class="status-item">JavaScript</div>
+                <div class="status-item"><i class="fas fa-bell"></i></div>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>kkubica912@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <h3>GitHub</h3>
-                        <p>github.com/krystofkubica</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/krystofkubica</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                    </form>
-                </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Kryštof Kubica. All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
+    </div>
+</body>
+</html>
