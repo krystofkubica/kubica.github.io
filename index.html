@@ -1,158 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>kubica</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="code.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    </head>
 <body>
-    <div class="vscode-container">
-        <!-- Title bar -->
-        <div class="titlebar">
-            <span>Visual Studio Code</span>
-            <div class="window-controls">
-                <div class="window-control window-minimize"></div>
-                <div class="window-control window-maximize"></div>
-                <div class="window-control window-close"></div>
+    <div class="background">
+        <canvas id="codeCanvas"></canvas>
+    </div>
+    
+    <div class="content">
+        <h1>Krystof Kubica</h1>
+        <p>Web Developer & Designer</p>
+        <button id="learnMoreBtn">Who am I?</button>
+        
+        <div class="tech-stack">
+            <div class="tech-container">
+                <div id="tech-html" class="tech-icon"></div>
+                <div id="tech-css" class="tech-icon"></div>
+            </div>
             </div>
         </div>
-        
-        <!-- Activity bar -->
-        <div class="activitybar">
-            <div class="activity-icon active"><i class="fas fa-file-alt"></i></div>
-            <div class="activity-icon"><i class="fas fa-search"></i></div>
-            <div class="activity-icon"><i class="fas fa-code-branch"></i></div>
-            <div class="activity-icon"><i class="fas fa-bug"></i></div>
-            <div class="activity-icon"><i class="fas fa-puzzle-piece"></i></div>
-        </div>
-        
-        <div class="sidebar">
-            <div class="sidebar-header">EXPLORER</div>
-            <ul class="explorer-files">
-                <li class="explorer-item" data-file="readme">
-                    <span class="file-icon markdown"><i class="fas fa-file-alt"></i>&nbsp;</span>
-                    README.MD
-                </li>
-                <li class="explorer-item" data-file="skills">
-                    <span class="file-icon html"><i class="fas fa-file-code"></i>&nbsp;</span>
-                    SKILLS.html
-                </li>
-                <li class="explorer-item" data-file="github">
-                    <span class="file-icon txt"><i class="fas fa-file"></i>&nbsp;</span>
-                    github.txt
-                </li>
-                <li class="explorer-item" data-file="contact">
-                    <span class="file-icon css"><i class="fas fa-file-code"></i>&nbsp;</span>
-                    contact.css
-                </li>
-            </ul>
-        </div>
-        
-        <div class="editor">
-            <div class="tabs">
-                <div class="tab active" data-file="readme"><span class="markdown"><i class="fas fa-file-alt"></i> README.MD</span></div>
-                <div class="tab" data-file="skills"><span class="html"><i class="fas fa-file-code"></i> SKILLS.html</span></div>
-                <div class="tab" data-file="github"><span class="txt"><i class="fas fa-file"></i> github.txt</span></div>
-                <div class="tab" data-file="contact"><span class="css"><i class="fas fa-file-code"></i> contact.css</span></div>
-            </div>
-            <div class="content">
-                <div id="readme-content" class="tab-content active">
-                    <div class="line-numbers">
-                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
-                    </div>
-                    <div class="code-content">
-                        <h1># Welcome to My Portfolio</h1>
-                        <p>My name is Krystof Kubica, I am currently 15 years old and from the Czech Republic.</p>
-                        <p>i enjoy coding fun projects :)</p>
-                    </div>
-                </div>
-                
-                <div id="skills-content" class="tab-content">
-                    <div class="line-numbers">
-                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43
-                    </div>
-                    <div class="code-content">
-                        <p>&lt;!DOCTYPE html&gt;</p>
-                        <p>&lt;html&gt;</p>
-                        <p>&lt;head&gt;</p>
-                        <p>&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;</p>
-                        <p>&nbsp;&nbsp;&lt;title&gt;Skills&lt;/title&gt;</p>
-                        <p>&nbsp;&nbsp;&lt;style&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;body { font-family: sans-serif; }</p>
-                        <p>&nbsp;&nbsp;&lt;/style&gt;</p>
-                        <p>&lt;/head&gt;</p>
-                        <p>&lt;body&gt;</p>
-                        <p>&nbsp;&nbsp;&lt;h1&gt;My Skills&lt;/h1&gt;</p>
-                        <p>&nbsp;&nbsp;&lt;ul&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;CSS (Web Design)&lt;/li&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;JavaScript&lt;/li&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Python&lt;/li&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Machine learning&lt;/li&gt;</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;3D modeling with blender&lt;/li&gt;</p>
-                        <p>&nbsp;&nbsp;&lt;/ul&gt;</p>
-                        <p>&lt;/body&gt;</p>
-                        <p>&lt;/html&gt;</p>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div id="github-content" class="tab-content">
-                    <div class="line-numbers">
-                        1<br>2<br>3
-                    </div>
-                    <div class="code-content">
-                        <p>GitHub: https://github.com/krystofkubica</p>
-                    </div>
-                </div>
-                
-                <div id="contact-content" class="tab-content">
-                    <div class="line-numbers">
-                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49
-                    </div>
-                    <div class="code-content">
-                        <p>.contact-form {</p>
-                        <p>&nbsp;&nbsp;max-width: 300px;</p>
-                        <p>&nbsp;&nbsp;margin: 10px auto;</p>
-                        <p>&nbsp;&nbsp;padding: 10px;</p>
-                        <p>}</p>
-                        <p>.contact-form input,</p>
-                        <p>.contact-form textarea {</p>
-                        <p>&nbsp;&nbsp;padding: 5px;</p>
-                        <p>&nbsp;&nbsp;border: 1px solid #ccc;</p>
-                        <p>&nbsp;&nbsp;margin-bottom: 10px;</p>
-                        <p>}</p>
-                        <p>.contact-form button {</p>
-                        <p>&nbsp;&nbsp;padding: 5px;</p>
-                        <p>&nbsp;&nbsp;background: #007acc;</p>
-                        <p>&nbsp;&nbsp;color: #fff;</p>
-                        <p>&nbsp;&nbsp;border: none;</p>
-                        <p>}</p>
-                        <p>.contact-email::before {</p>
-                        <p>&nbsp;&nbsp;content: "kkubica912@gmail.com";</p>
-                        <p>&nbsp;&nbsp;display: block;</p>
-                        <p>&nbsp;&nbsp;text-align: center;</p>
-                        <p>&nbsp;&nbsp;color: #007acc;</p>
-                        <p>&nbsp;&nbsp;margin-bottom: 10px;</p>
-                        <p>}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Status bar -->
-        <div class="statusbar">
-            <div class="status-item"><i class="fas fa-check-circle"></i> Ready</div>
-            <div class="status-item"><i class="fas fa-code-branch"></i> main</div>
-            <div class="status-right">
-                <div class="status-item">UTF-8</div>
-                <div class="status-item">JavaScript</div>
-                <div class="status-item"><i class="fas fa-bell"></i></div>
             </div>
         </div>
     </div>
+
+    <div class="about-section" id="aboutMe">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I design and build websites that look great and work smoothly.</p>
+<p>I use HTML, CSS, and JavaScript to create clean, responsive layouts.</p>
+<p>My goal is to deliver clear, user-friendly experiences.</p>
+        </div>
+    </div>
+    <div class="skills-section" id="skills"></div>
+    <h2 id="skills-heading">my skills</h2>
+    <div class="tech-row tech-row-1">
+        <div class="tech-icon html" id="tech-html">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <span class="tech-label">HTML5</span>
+        </div>
+        <div class="tech-icon css" id="tech-css">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <span class="tech-label">CSS3</span>
+        </div>
+        <div class="tech-icon js" id="tech-js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <span class="tech-label">&nbspJavaScript</span>
+        </div>
+    </div>
+    <div class="tech-row tech-row-2">
+        <div class="tech-icon react" id="tech-react">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            <span class="tech-label">&nbspReact</span>
+        </div>
+        <div class="tech-icon python" id="tech-python">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <span class="tech-label">Python</span>
+        </div>
+        <div class="tech-icon blender" id="tech-blender">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender">
+            <span class="tech-label">&nbspBlender</span>
+        </div>
+    </div>
+
+    <div class="projects-section" id="projects">
+        <h2 id="projects-heading">My Projects</h2>
+        
+        <div class="projects-container">
+            <a href="https://github.com/krystofkubica/LiteScript" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./litescript.png" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>my own interpreted scripted language</h3>
+                        <p> focusing on simplicity and minimality.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://github.com/krystofkubica/todo-list" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./todo.png" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>todo-list</h3>
+                        <p>A simple React todo list application.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://github.com/krystofkubica/dreamland" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./dreamlandpic.png" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dreamland</h3>
+                        <p>A personal web application designed to help you capture and manage your dreams effortlessly.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="github-container">
+            <a href="https://github.com/krystofkubica" target="_blank" class="github-link">
+                <div class="github-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                        <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>See All Projects</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Let's collaborate on something amazing</p>
+            
+            <div class="contact-links-container">
+                <a href="mailto:kkubica912@gmail.com" class="contact-link email-link">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <p>kkubica912@gmail.com</p>
+                    </div>
+                    <div class="hover-effect"></div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/krystofkubica/" target="_blank" class="contact-link linkedin-link">
+                    <div class="contact-icon-wrapper">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>LinkedIn</h3>
+                        <p>krystofkubica</p>
+                    </div>
+                    <div class="hover-effect"></div>
+                </a>
+                
+                <a href="https://github.com/krystofkubica" target="_blank" class="contact-link github-link">
+                    <div class="contact-icon-wrapper">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <p>krystofkubica</p>
+                    </div>
+                    <div class="hover-effect"></div>
+                </a>
+            </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="contact-particles-container" id="contactParticles"></div>
+    </section>
+
+    <script src="code.js"></script>
+    <script>
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            document.getElementById('aboutMe').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <nav class="navbar">
+        <div class="navbar-logo">Kubica</div>
+        <div class="navbar-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      <footer class="site-footer">
+        <div class="footer-content">
+      <h3 class="footer-text">© 2025 Krystof Kubica. All rights reserved.</h3>
 </body>
 </html>
