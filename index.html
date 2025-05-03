@@ -1,209 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="otherstyle.css">
+</head>
 <body>
-    <div class="background">
-        <canvas id="codeCanvas"></canvas>
-    </div>
-    
-    <div class="content">
-        <h1>Krystof Kubica</h1>
-        <p>Web Developer & Designer</p>
-        <button id="learnMoreBtn">Who am I?</button>
-        
-        <div class="tech-stack">
-            <div class="tech-container">
-                <div id="tech-html" class="tech-icon"></div>
-                <div id="tech-css" class="tech-icon"></div>
-            </div>
-            </div>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftechgage.com%2Fwp-content%2Fuploads%2F2015%2F04%2FMicrosoft-Visual-Studio-Code-Icon.png&f=1&nofb=1&ipt=5419b9959d93ac89b187822daa435766fe9ccf858273609a0ece4f830c4798f2" alt="VS Code Logo">
+            <a href="#">Kryštof Kubica</a>
         </div>
-            </div>
-        </div>
-    </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#myskills">Skills</a></li>
+        </ul>
+    </nav>
+    <h1>Hi, I'm Kryštof Kubica.</h1>
+    <h2>Web dev</h2>
 
-    <div class="about-section" id="aboutMe">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>I design and build websites that look great and work smoothly.</p>
-<p>I use HTML, CSS, and JavaScript to create clean, responsive layouts.</p>
-<p>My goal is to deliver clear, user-friendly experiences.</p>
-        </div>
-    </div>
-    <div class="skills-section" id="skills"></div>
-    <h2 id="skills-heading">my skills</h2>
-    <div class="tech-row tech-row-1">
-        <div class="tech-icon html" id="tech-html">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-            <span class="tech-label">HTML5</span>
-        </div>
-        <div class="tech-icon css" id="tech-css">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-            <span class="tech-label">CSS3</span>
-        </div>
-        <div class="tech-icon js" id="tech-js">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-            <span class="tech-label">&nbspJavaScript</span>
-        </div>
-    </div>
-    <div class="tech-row tech-row-2">
-        <div class="tech-icon react" id="tech-react">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-            <span class="tech-label">&nbspReact</span>
-        </div>
-        <div class="tech-icon python" id="tech-python">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-            <span class="tech-label">Python</span>
-        </div>
-        <div class="tech-icon blender" id="tech-blender">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender">
-            <span class="tech-label">&nbspBlender</span>
-        </div>
-    </div>
+    <div class="code-symbol-mobile">&lt;/&gt;</div>
 
-    <div class="projects-section" id="projects">
-        <h2 id="projects-heading">My Projects</h2>
-        
+    <section id="about">
+        <h3>About Me</h3>
+        <p>
+            Hello! I'm Kryštof Kubica, a web developer who enjoys creating clean and functional websites.
+             I spend my free time exploring nature, coding personal projects, and relaxing with cats.
+             I'm always eager to learn new things and improve my skills.
+        </p>
+    </section>
+    <section id="projects">
+        <h3>My Projects</h3>
         <div class="projects-container">
-            <a href="https://github.com/krystofkubica/LiteScript" target="_blank" style="text-decoration: none; color: inherit;">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./litescript.png" alt="Project 1">
-                    </div>
-                    <div class="project-content">
-                        <h3>my own interpreted scripted language</h3>
-                        <p> focusing on simplicity and minimality.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                        </div>
-                    </div>
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h4>my own interpreted scripted language</h4>
+                <p>focusing on simplicity and minimality.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
                 </div>
-            </a>
+                <div class="project-links">
+                    <a href="https://github.com/krystofkubica/LiteScript" target="_blank">Source Code</a>
+                </div>
+            </div>
             
-            <a href="https://github.com/krystofkubica/todo-list" target="_blank" style="text-decoration: none; color: inherit;">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./todo.png" alt="Project 2">
-                    </div>
-                    <div class="project-content">
-                        <h3>todo-list</h3>
-                        <p>A simple React todo list application.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>CSS</span>
-                        </div>
-                    </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h4>todo-list</h4>
+                <p>A React todo list application with browser cache implemented for improved performance.</p>
+                <div class="tech-stack">
+                    <span>React</span>
                 </div>
-            </a>
+                <div class="project-links">
+                    <a href="https://github.com/krystofkubica/todo-list" target="_blank">Source Code</a>
+                </div>
+            </div>
             
-            <a href="https://github.com/krystofkubica/dreamland" target="_blank" style="text-decoration: none; color: inherit;">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./dreamlandpic.png" alt="Project 3">
-                    </div>
-                    <div class="project-content">
-                        <h3>Dreamland</h3>
-                        <p>A personal web application designed to help you capture and manage your dreams effortlessly.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                    </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h4>Dreamland</h4>
+                <p>A personal web application designed to help you capture and manage your dreams effortlessly.</p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
                 </div>
-            </a>
+                <div class="project-links">
+                    <a href="https://github.com/krystofkubica/dreamland" target="_blank">Source Code</a>
                 </div>
             </div>
         </div>
-        
-        <div class="github-container">
-            <a href="https://github.com/krystofkubica" target="_blank" class="github-link">
-                <div class="github-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-                        <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    <span>See All Projects</span>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Let's collaborate on something amazing</p>
-            
-            <div class="contact-links-container">
-                <a href="mailto:kkubica912@gmail.com" class="contact-link email-link">
-                    <div class="contact-icon-wrapper">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <p>kkubica912@gmail.com</p>
-                    </div>
-                    <div class="hover-effect"></div>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/krystofkubica/" target="_blank" class="contact-link linkedin-link">
-                    <div class="contact-icon-wrapper">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>LinkedIn</h3>
-                        <p>krystofkubica</p>
-                    </div>
-                    <div class="hover-effect"></div>
-                </a>
-                
-                <a href="https://github.com/krystofkubica" target="_blank" class="contact-link github-link">
-                    <div class="contact-icon-wrapper">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>GitHub</h3>
-                        <p>krystofkubica</p>
-                    </div>
-                    <div class="hover-effect"></div>
-                </a>
-            </div>
-                    </button>
-                </form>
-            </div>
-        </div>
-        
-        <div class="contact-particles-container" id="contactParticles"></div>
     </section>
 
-    <script src="code.js"></script>
-    <script>
-        document.getElementById('learnMoreBtn').addEventListener('click', function() {
-            document.getElementById('aboutMe').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    </script>
-    <nav class="navbar">
-        <div class="navbar-logo">Kubica</div>
-        <div class="navbar-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <p>If you have any questions or want to work together, just get in touch!</p>
+        
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <h4>Email</h4>
+                <a href="mailto:kkubica912@gmail.com" class="contact-link">kkubica912@gmail.com</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </div>
+                <h4>GitHub</h4>
+                <a href="https://github.com/krystofkubica" target="_blank" class="contact-link">github.com/krystofkubica</a>
+            </div>
         </div>
-        <button class="navbar-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-      <footer class="site-footer">
-        <div class="footer-content">
-      <h3 class="footer-text">© 2025 Krystof Kubica. All rights reserved.</h3>
+        
+        <div class="contact-message">
+            <p>I'm looking forward to hearing from you.</p>
+        </div>
+    </section>
+    <section id="myskills">
+        <h3>My Skills</h3>
+        <div class="skills-container">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Python</span>
+            <span class="skill">Blender</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kryštof Kubica. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.159.0/examples/jsm/controls/OrbitControls.js"></script>
+<script src="https://unpkg.com/three@0.159.0/examples/jsm/loaders/FontLoader.js"></script>
+ <script src="https://unpkg.com/three@0.159.0/examples/jsm/geometries/TextGeometry.js"></script>
+ <script src="https://unpkg.com/three@0.159.0/examples/jsm/postprocessing/EffectComposer.js"></script>
+ <script src="https://unpkg.com/three@0.159.0/examples/jsm/postprocessing/RenderPass.js"></script>
+ <script src="https://unpkg.com/three@0.159.0/examples/jsm/postprocessing/UnrealBloomPass.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
