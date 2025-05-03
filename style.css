@@ -97,6 +97,26 @@ body {
   color: white;
 }
 
+/* Mobile navbar styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
 h1 {
   color: white;
   font-size: 4rem;
@@ -199,6 +219,66 @@ section p {
     font-size: 1.8rem;
     margin: 0 0 1.5rem;
   }
+  
+  .navbar {
+    padding: 1rem 1.5rem;
+    max-width: 95%;
+  }
+  
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+  
+  .navbar .logo img {
+    height: 28px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(12, 12, 12, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin: 1.5rem 0;
+  }
+  
+  .navbar .nav-links li a {
+    font-size: 1.2rem;
+  }
+  
+  /* Hamburger animation when menu is active */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 576px) {
@@ -227,6 +307,26 @@ section p {
     font-size: 1.8rem;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .navbar .logo a {
+    font-size: 1.3rem;
+  }
+  
+  .navbar .logo img {
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .nav-links {
+    width: 85%;
+  }
+}
+
 .mobile-animation {
   position: relative;
   width: 100%;

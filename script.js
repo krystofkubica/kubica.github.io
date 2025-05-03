@@ -566,3 +566,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+// Add this to your existing JavaScript file
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.createElement('div');
+  hamburger.classList.add('hamburger');
+  hamburger.innerHTML = '<span></span><span></span><span></span>';
+  
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelector('.nav-links');
+  
+  navbar.insertBefore(hamburger, navLinks);
+  
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+  
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.nav-links li a').forEach(link => {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  });
+});
